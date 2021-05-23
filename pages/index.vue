@@ -1,32 +1,23 @@
 <template>
   <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">PrefecturePopulation</h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+    <PrefectureCheckbox :prefecture="prefecture" />
   </div>
 </template>
 
 <script>
-export default {}
+import PrefectureCheckbox from '~/components/PrefectureCheckbox.vue'
+export default {
+  components: {
+    PrefectureCheckbox,
+  },
+  data() {
+    return {
+      prefecture: {
+        name: '北海道',
+      },
+    }
+  },
+}
 </script>
 
 <style>
