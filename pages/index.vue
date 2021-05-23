@@ -26,7 +26,13 @@
 </template>
 
 <script>
-export default {}
+export default {
+  async asyncData(context) {
+    const result = await context.$axios.get('api/v1/prefectures')
+    console.log(result)
+    return { prefectures: result.data.result }
+  },
+}
 </script>
 
 <style>
