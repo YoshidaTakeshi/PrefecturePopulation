@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="checkbox">
     <input
       :id="prefecture.prefName"
       v-model="checked"
@@ -35,3 +35,28 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.checkbox {
+  display: inline-block;
+  font-size: 20px;
+  width: 125px;
+}
+
+.checkbox input {
+  height: 20px;
+  width: 20px;
+}
+
+@media screen and (max-width: 480px) {
+  .checkbox {
+    font-size: 15px;
+    width: 90px;
+  }
+
+  .checkbox input {
+    height: 15px;
+    width: 15px;
+  }
+}
+</style>
