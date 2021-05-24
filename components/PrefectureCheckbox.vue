@@ -1,12 +1,13 @@
 <template>
   <div>
     <input
-      :id="prefecture.name"
+      :id="prefecture.prefName"
       v-model="checked"
       type="checkbox"
-      :value="prefecture.neme"
+      :value="prefecture.prefName"
+      @change="changeCheckbox()"
     />
-    <label :for="prefecture.name">{{ value }}</label>
+    <label :for="prefecture.prefName">{{ prefecture.prefName }}</label>
   </div>
 </template>
 
@@ -22,6 +23,15 @@ export default {
     return {
       checked: false,
     }
+  },
+  methods: {
+    changeCheckbox() {
+      if (this.checked) {
+        this.$emit('check', this.prefecture)
+      } else {
+        this.$emit('uncheck', this.prefecture)
+      }
+    },
   },
 }
 </script>
