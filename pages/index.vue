@@ -33,6 +33,7 @@ export default {
   },
   data() {
     return {
+      border: null,
       checkedPrefs: [],
       datacollection: {
         labels: [],
@@ -59,6 +60,21 @@ export default {
             },
           ],
         },
+        annotation: {
+          annotations: [
+            {
+              type: 'box',
+              drawTime: 'afterDatasetsDraw',
+              xMin: 2, // 基準とするx軸の値（始点）
+              xMax: 3, // 基準とするx軸の値（終点）
+              yMin: 0, // 基準とするy軸の値（始点）
+              yMax: 0, // 基準とするy軸の値（終点）
+              backgroundColor: 'rgba(100,100,180,.2)',
+              borderWidth: 0,
+              borderColor: 'rgba(180,100,180,0)',
+            },
+          ],
+        },
       },
     }
   },
@@ -74,6 +90,7 @@ export default {
           },
         }
       )
+      this.border = result.boundaryYear
       // checkedPrefsに県名と人口の情報を持ったオブジェクトを追加
       const prefPopulation = {
         prefName: prefecture.prefName,
