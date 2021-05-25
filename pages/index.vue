@@ -11,11 +11,7 @@
       />
     </div>
     <div class="chart-container">
-      <PopulationChart
-        class="chart"
-        :chart-data="datacollection"
-        :options="options"
-      />
+      <PopulationChart :chart-data="datacollection" :options="options" />
     </div>
   </div>
 </template>
