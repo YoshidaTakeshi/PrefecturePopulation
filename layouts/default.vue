@@ -1,10 +1,22 @@
 <template>
   <div>
+    <header>
+      <h1>都道府県別人口数</h1>
+    </header>
     <Nuxt />
   </div>
 </template>
 
 <style>
+header {
+  background-color: rgb(170, 170, 170);
+  text-align: center;
+}
+
+header h1 {
+  display: inline-block;
+}
+
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
