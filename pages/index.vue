@@ -10,7 +10,7 @@
         @uncheck="deletePopulation($event)"
       />
     </div>
-    <div class="small">
+    <div class="chart-container">
       <PopulationChart :checked-prefs="checkedPrefs" />
       <p>※{{ border }}以降は推定値</p>
     </div>
@@ -71,7 +71,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .prefectures-container {
   padding: 0 100px 0;
   margin-top: 10px;
@@ -83,9 +83,9 @@ export default {
   font-size: 20px;
 }
 
-.small {
-  max-width: 600px;
-  margin: 150px auto;
+.chart-container {
+  max-width: 700px;
+  margin: 20px auto;
 }
 
 @media screen and (max-width: 480px) {
@@ -95,6 +95,10 @@ export default {
 
   .prefectures-container p {
     font-size: 10px;
+  }
+
+  .chart-container {
+    max-width: 350px;
   }
 }
 </style>
