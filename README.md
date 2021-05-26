@@ -5,10 +5,8 @@
 
 ## Requirement
 
-"hoge"を動かすのに必要なライブラリなどを列挙する
-
-* huga 3.5.2
-* hogehuga 1.0.2
+* Node.js v16.2.0
+* npm 7.14.0
 
 
 ## Build Setup
@@ -33,7 +31,7 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 
 ## Note
 
-* API
-RESAS API: https://opendata.resas-portal.go.jp/
+参照
+* RESAS API: https://opendata.resas-portal.go.jp/
 
 
